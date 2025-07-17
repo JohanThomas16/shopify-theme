@@ -1,0 +1,44 @@
+.carousel {
+  .main-image {
+    max-width: 300px;
+    height: auto;
+  }
+  .thumbnails {
+    display: flex;
+    gap: 10px;
+    img {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+    }
+  }
+}
+
+.purchase-options, .flavor-selection {
+  margin: 10px 0;
+  label {
+    margin-right: 15px;
+  }
+}
+
+.whats-included {
+  select, ul {
+    margin: 10px 0;
+  }
+}
+
+.price {
+  font-weight: bold;
+}
+.compare-at-price {
+  text-decoration: line-through;
+  color: gray;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

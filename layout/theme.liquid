@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ shop.name }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ content_for_header }}
+  <link rel="stylesheet" href="{{ 'style.scss.css' | asset_url }}" />
+</head>
+<body>
+  <main>
+    {{ content_for_layout }}
+  </main>
+  <script src="{{ 'script.js' | asset_url }}" defer></script>
+</body>
+</html>

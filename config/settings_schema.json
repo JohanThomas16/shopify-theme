@@ -1,0 +1,11 @@
+{
+  "name": "Product Settings",
+  "settings": [
+    {
+      "type": "text",
+      "id": "benefits",
+      "label": "Benefits",
+      "default": "Lorem ipsum Dolor Sit Amet, Consectetur Adipiscing Elit., Lorem ipsum Dolor Sit Amet, Consectetur Adipiscing Elit., Lorem ipsum Dolor Sit Amet, Consectetur Adipiscing Elit., Lorem ipsum Dolor Sit Amet, Consectetur Adipiscing Elit."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+<div class="purchase-options">
+  <div class="recommended">Recommended</div>
+  <label><input type="radio" name="subscription" value="single" checked> Single Drink Subscription <span class="price">$6.00</span> <span class="compare-at-price">$10.00</span></label>
+  <label><input type="radio" name="subscription" value="double"> Double Drink Subscription <span class="price">$12.00</span> <span class="compare-at-price">$20.00</span></label>
+</div>
+<div class="flavor-selection" id="flavor-selection">
+  <div class="flavor-group" data-for="single">
+    <h4>Choose Flavor</h4>
+    {% for option in product.options %}
+      {% if option.name == 'Flavor' %}
+        {% for value in option.values %}
+          <label><input type="radio" name="flavor" value="{{ value }}" {% if forloop.first %}checked{% endif %}> {{ value }} <img src="{{ value | handleize | append: '.png' | asset_url }}" alt="{{ value }}"></label>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="flavor-group" data-for="double" style="display: none;">
+    <h4>Choose Flavor 1</h4>
+    {% for option in product.options %}
+      {% if option.name == 'Flavor' %}
+        {% for value in option.values %}
+          <label><input type="radio" name="flavor1" value="{{ value }}" {% if forloop.first %}checked{% endif %}> {{ value }} <img src="{{ value | handleize | append: '.png' | asset_url }}" alt="{{ value }}"></label>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    <h4>Choose Flavor 2</h4>
+    {% for option in product.options %}
+      {% if option.name == 'Flavor' %}
+        {% for value in option.values %}
+          <label><input type="radio" name="flavor2" value="{{ value }}" {% if forloop.first %}checked{% endif %}> {{ value }} <img src="{{ value | handleize | append: '.png' | asset_url }}" alt="{{ value }}"></label>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

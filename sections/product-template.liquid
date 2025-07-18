@@ -1,0 +1,12 @@
+<div class="product-page">
+  <h1>{{ product.title }}</h1>
+  <div class="rating">★★★★☆ (4.6/5, 2,000+ reviews)</div>
+  <p>{{ product.description }}</p>
+  {% include 'product-gallery' %}
+  {% include 'purchase-options' %}
+  {% include 'whats-included' %}
+  <form action="/cart/add" method="post">
+    <input type="hidden" name="id" id="variant-id" value="{{ product.variants.first.id }}">
+    <button type="submit">Add to Cart</button>
+  </form>
+</div>

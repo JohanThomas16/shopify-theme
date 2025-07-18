@@ -1,0 +1,17 @@
+<div class="carousel">
+  <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" class="main-image">
+  <div class="thumbnails">
+    {% for image in product.images %}
+      <img src="{{ image | img_url: 'small' }}" alt="{{ image.alt }}" data-large="{{ image | img_url: 'large' }}">
+    {% endfor %}
+  </div>
+  <div class="carousel-nav">
+    <button><</button>
+    <button>></button>
+  </div>
+  <div class="dots">
+    {% for image in product.images %}
+      <span class="{% if forloop.first %}active{% endif %}"></span>
+    {% endfor %}
+  </div>
+</div>

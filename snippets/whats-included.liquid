@@ -1,0 +1,23 @@
+<div class="whats-included">
+  <h4>What’s Included:</h4>
+  <div class="delivery-options">
+    <div>
+      <select name="delivery-frequency">
+        <option value="every30">Every 30 Days</option>
+        <option value="one-time">One Time (Free)</option>
+      </select>
+      <img src="{{ 'vanilla.png' | asset_url }}" alt="Vanilla Bottle">
+    </div>
+    <div>
+      <span>One Time (Free)</span>
+      <img src="{{ 'chocolate.png' | asset_url }}" alt="Chocolate Bottle">
+      <img src="{{ 'vanilla.png' | asset_url }}" alt="Vanilla Bottle">
+      <img src="{{ 'orange.png' | asset_url }}" alt="Orange Bottle">
+    </div>
+  </div>
+  <ul>
+    {% for benefit in product.metafields.custom.benefits %}
+      <li>{{ benefit }}</li>
+    {% endfor %}
+  </ul>
+</div>
